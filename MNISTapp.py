@@ -42,8 +42,8 @@ if canvas_result.image_data is not None:
     image1 = cv2.resize(image1,(28,28))
     st.image(image1)
 
-    #image1.resize(1,28,28,1)
-    image1.resize(1, 784)
+    image1.resize(1,28,28,1)
+    #image1.resize(1, 784)
     image1 = image1 / 255.0
     st.title(np.argmax(model.predict(image1)))
 #if canvas_result.json_data is not None:
