@@ -9,7 +9,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import cv2
 
-model = keras.models.load_model(r'my_model_dropout.h5')
+model = keras.models.load_model(r'model_.h5')
 stroke_width = st.sidebar.slider("Stroke width: ", 1, 35, 14)
 stroke_color = st.sidebar.color_picker("Stroke color hex: ", "#eee")
 bg_color = st.sidebar.color_picker("Background color hex: ")
