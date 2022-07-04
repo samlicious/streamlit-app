@@ -3,3 +3,4 @@ matplotlib
 keras
 pandas
 opencv-python
+streamlit-drawable-canvas
