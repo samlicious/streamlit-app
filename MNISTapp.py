@@ -9,7 +9,7 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import cv2
 
-model = keras.models.load_model(r'model_.h5')
+model = keras.models.load_model(r'my_model_dropout.h5')
 stroke_width = st.sidebar.slider("Stroke width: ", 1, 35, 14)
 stroke_color = st.sidebar.color_picker("Stroke color hex: ", "#eee")
 bg_color = st.sidebar.color_picker("Background color hex: ")
@@ -42,8 +42,8 @@ if canvas_result.image_data is not None:
     image1 = cv2.resize(image1,(28,28))
     st.image(image1)
 
-    image1.resize(1,28,28,1)
-    #image1.resize(1, 784)
+    #image1.resize(1,28,28,1)
+    image1.resize(1, 784)
     image1 = image1 / 255.0
     st.title(np.argmax(model.predict(image1)))
 #if canvas_result.json_data is not None:
